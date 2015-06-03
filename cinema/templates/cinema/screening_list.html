@@ -1,0 +1,25 @@
+{% extends 'cinema/base.html' %}
+{% block content %}
+
+    <h1 class="cover-heading">Расписание сеансов</h1>
+    <div style="text-align: left">
+    <p>&nbsp;</p>
+    <table class="table"><thead>
+    <tr><th>Время</th>
+    <th>Фильм</th>
+   <th>Зал</th></tr>
+    </thead>
+    <tbody>
+    {% for screening in object_list %}
+        <tr>
+        <td>{{ screening.date}}</td>
+        <td><a href="{{ screening.get_absolute_url }}">{{ screening.film.title }}</a></td>
+        <td>{{ screening.hall.title }}</td>
+        </tr>
+    {% empty %}
+    <p>Нет сеансов</p>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+{% endblock %}

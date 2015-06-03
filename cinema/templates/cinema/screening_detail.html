@@ -1,0 +1,6 @@
+{% extends 'cinema/base.html' %}
+{% block content %}
+    <p>{{ screening.date }}</p>
+    <h2>{{ screening.film.title }}</h2>
+    <p>{{ screening.hall.name }}</p>
+{% endblock %}

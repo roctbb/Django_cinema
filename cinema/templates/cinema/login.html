@@ -1,0 +1,20 @@
+{% extends "cinema/base.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+  {% endif %}
+
+  <form action='' method='post'>
+  {% csrf_token %}
+    <label for="username">Логин:</label>
+    <input class="form-control" type="text" name="username" value="" id="username">
+    <label for="password">Пароль:</label>
+    <input class="form-control" type="password" name="password" value="" id="password">
+
+    <input class="form-control" type="submit" value="login" />
+    <input class="form-control" type="hidden" name="next" value="{{ next|escape }}" />
+  </form>
+
+{% endblock %}
