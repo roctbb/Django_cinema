@@ -5,6 +5,8 @@ class Hall(models.Model):
     title = models.CharField(max_length=255) # заголовок поста
     seats = models.IntegerField();
     rows = models.IntegerField();
+    vipplaces = models.CharField(max_length=255)
+    notvalidplaces =  models.CharField(max_length=255)
     def __unicode__(self):
         return self.title
 
