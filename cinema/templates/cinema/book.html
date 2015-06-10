@@ -1,6 +1,6 @@
 {% extends 'cinema/base.html' %}
 {% block content %}
-    <p>{{ screening.date }}</p>
+    <h4>{{ screening.date }}</h4>
     <h2>{{ screening.film.title }}</h2>
     <p>{{ screening.hall.name }}</p>
      {% autoescape off %}

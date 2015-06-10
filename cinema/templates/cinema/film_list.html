@@ -1,0 +1,17 @@
+{% extends 'cinema/base.html' %}
+{% block content %}
+<div class="row" style="margin-top: 70px;">
+    <h1 class="cover-heading">Фильмы в прокате</h1>
+    <p>&nbsp;</p>
+    {% for hall in object_list %}
+        <h3>{{ hall.title }}</h3>
+        <div class="row">
+        <div class="col-md-3"><img src="/static/photos/{{ hall.photo }}" style="width: 100%;" /></div>
+        <div class="col-md-7"><p align="left"> {{ hall.description }}</p>
+        </div>
+        </div>
+    {% empty %}
+    <p>Нет фильмов</p>
+    {% endfor %}
+</div>
+{% endblock %}

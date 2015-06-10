@@ -1,7 +1,8 @@
 {% extends "cinema/base.html" %}
 
 {% block content %}
-
+    <center>
+<div style="width: 300px;">
   {% if form.errors %}
     <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
   {% endif %}
@@ -12,9 +13,11 @@
     <input class="form-control" type="text" name="username" value="" id="username">
     <label for="password">Пароль:</label>
     <input class="form-control" type="password" name="password" value="" id="password">
-
-    <input class="form-control" type="submit" value="login" />
-    <input class="form-control" type="hidden" name="next" value="{{ next|escape }}" />
+    <p>&nbsp;</p>
+    <input class="form-control btn btn-info" type="submit" value="Вход" />
+    <input class="form-control" type="hidden" name="next" value="{{ next|escape }}" /><p>&nbsp;</p>
+      <p>Нет учетной записи? <a href="/cinema/register/">Зарегистрируйтесь!</a></p>
   </form>
-
+</div>
+    </center>
 {% endblock %}

@@ -154,12 +154,11 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
-    top: 0;
+        position: absolute;
+      top:0;
   }
   .mastfoot {
-    position: fixed;
-    bottom: 0;
+
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -173,11 +172,11 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 1000px;
   }
 }
     </style>
@@ -198,9 +197,9 @@ body {
               <h3 class="masthead-brand">Кинотеатр Татарстан</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="/cinema/">Главная страница</a></li>
-                  <li><a href="/cinema/login/">Вход</a></li>
-                  <li><a href="/cinema/register/">Регистрация</a></li>
+                  <li ><a href="/cinema/">Бронирование</a></li>
+                  <li><a href="/cinema/halls/">Залы</a></li>
+                  <li><a href="/cinema/films/">Фильмы</a></li>
                 </ul>
               </nav>
             </div>
@@ -209,12 +208,6 @@ body {
           <div class="inner cover">
 
             {% block content %}Empty page{% endblock %}
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
           </div>
 
         </div>

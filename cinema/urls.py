@@ -19,7 +19,7 @@ from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
-from cinema.views import ScreeningsListView, ScreeningsDetailView,login,logout,screening,register
+from cinema.views import ScreeningsListView, ScreeningsDetailView,login,logout,screening,register, HallListView, FilmListView
 
 
 admin.autodiscover()  #функция автоматического обнаружения файлов admin.py в наших приложениях
@@ -28,6 +28,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)), #URL админки http://имя_сайта/admin/
     url(r'^cinema/$', ScreeningsListView.as_view(), name='list'), # то есть по URL http://имя_сайта/blog/
                                                # будет выводиться список постов
+    url(r'^cinema/halls/$', HallListView.as_view(), name='list'),
+    url(r'^cinema/films/$', FilmListView.as_view(), name='list'),
     url(r'^cinema/(?P<rid>\d+)/$', 'cinema.views.screening'),
     url(r'^cinema/login/$',  login),
     url(r'^cinema/logout/$', logout),

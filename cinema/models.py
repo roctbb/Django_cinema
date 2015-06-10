@@ -7,6 +7,8 @@ class Hall(models.Model):
     rows = models.IntegerField();
     vipplaces = models.CharField(max_length=255)
     notvalidplaces =  models.CharField(max_length=255)
+    description = models.CharField(max_length=1000)
+    photo = models.CharField(max_length=100)
     def __unicode__(self):
         return self.title
 
@@ -15,6 +17,8 @@ class Hall(models.Model):
 
 class Film(models.Model):
     title = models.CharField(max_length=255) # заголовок поста
+    description = models.CharField(max_length=1000)
+    photo = models.CharField(max_length=100)
     def __unicode__(self):
         return self.title
 
