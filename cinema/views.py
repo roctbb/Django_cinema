@@ -9,7 +9,7 @@ from django.views.generic import ListView, DetailView
 from django.contrib import auth
 from django.utils.decorators import method_decorator
 
-   
+
 class ScreeningsListView(ListView):  # представление в виде списка
     model = Screening  # модель для представления
 

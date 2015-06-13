@@ -1,6 +1,6 @@
 {% extends 'cinema/base.html' %}
 {% block content %}
-
+<div class="row" style="margin-top: 70px;">
     <h1 class="cover-heading">Залы в нашем кинотеатре</h1>
     <p>&nbsp;</p>
     {% for hall in object_list %}
@@ -14,4 +14,5 @@
     {% empty %}
     <li>Нет залов</li>
     {% endfor %}
+</div>
 {% endblock %}
